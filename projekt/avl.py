@@ -134,7 +134,7 @@ class AVLTree:
         self.pre_order_1(root.left)
         self.pre_order_1(root.right)
 
-    def tree_size(self):
+    def get_size(self):
         return self.size
 
     def is_avl(self):
@@ -157,11 +157,10 @@ class AVLTree:
 
 
 myTree = AVLTree()
-tree = None
 nums = [33, 13, 52, 9, 21, 61, 8, 11]
 for num in nums:
-    tree = myTree.insert_node(tree, num)
-myTree.print_2d(tree, 2)
-tree = myTree.delete_node(tree, 13)
+    myTree.insert(num)
+myTree.print_tree()
+myTree.delete(13)
 print("After Deletion: ")
-myTree.print_2d(tree, 2)
+myTree.print_tree()
