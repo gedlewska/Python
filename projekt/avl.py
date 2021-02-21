@@ -7,6 +7,7 @@ class Node:
         self.left = None
         self.right = None
         self.height = 1
+        self.balance = 1
 
 
 class AVLTree:
@@ -94,16 +95,16 @@ class AVLTree:
             return root
 
         root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
-        balance = self.get_balance(root)
+        root.balance = self.get_balance(root)
 
-        if balance > 1 and self.get_balance(root.left) >= 0:
+        if root.balance > 1 and root.left.balance >= 0:
             return self.right_rotate(root)
-        if balance < -1 and self.get_balance(root.right) <= 0:
+        if root.balance < -1 and root.right.balance <= 0:
             return self.left_rotate(root)
-        if balance > 1 and self.get_balance(root.left) < 0:
+        if root.balance > 1 and root.left.balance < 0:
             root.left = self.left_rotate(root.left)
             return self.right_rotate(root)
-        if balance < -1 and self.get_balance(root.right) > 0:
+        if root.balance < -1 and root.right.balance > 0:
             root.right = self.right_rotate(root.right)
             return self.left_rotate(root)
 
@@ -138,7 +139,7 @@ class AVLTree:
         return self.size
 
     def is_avl(self):
-        balance = self.get_balance(self.root)
+        balance = self.root.balance
         return balance == 1 or balance == 0 or balance == -1
 
     def print_tree(self):
@@ -154,6 +155,22 @@ class AVLTree:
             print(end=" ")
         print(root.data)
         self.print_2d(root.left, space)
+
+    def is_balanced(self):
+        return self.is_height_balanced(self.root) > -1
+
+    def is_height_balanced(self, root):
+        if root is None:
+            return 0
+        left_height = self.is_height_balanced(root.left)
+        if left_height == -1:
+            return -1
+        right_height = self.is_height_balanced(root.right)
+        if right_height == -1:
+            return -1
+        if abs(left_height - right_height) > 1:
+            return -1
+        return max(left_height, right_height) + 1
 
 
 myTree = AVLTree()

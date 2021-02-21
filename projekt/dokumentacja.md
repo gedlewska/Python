@@ -52,9 +52,11 @@ Dodatkowo klasa AVLTree zawiera dwie metody wypisujące drzewa:
 - print_tree - wypisuje drzewo w postaci drzewa (wizualizuje wygląd drzewa)    
 - pre_order - wypisuje elementy drzewa w przejściu preOrder przez drzewo  
 
-Metoda is_avl sprawdza czy drzewo jest postaci avl wykorzystujac różnicę wysokosci prawego i lewego poddrzewa. 
+Metoda is_avl sprawdza czy drzewo jest postaci avl, sprawdzając różnicę wysokosci prawego i lewego poddrzewa.
+Metoda is_balanced sprawdza czy drzewo jest postaci avl, sprawdzając całą jego strukturę.
 
-Implementacja posiada również metodę get_size, która zwraca ilość elementów drzewa.
+Implementacja posiada również metodę get_size, która zwraca ilość elementów drzewa oraz get_height, która zwraca
+wysokość drzewa.
 
 Źródła:  
 https://eduinf.waw.pl/inf/alg/001_search/0108.php
