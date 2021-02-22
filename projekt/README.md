@@ -1,6 +1,6 @@
 # Drzewo AVL
 
-**Drzeno AVL** - jest to zrównoważone binarne drzewo poszukiwań (BST), w którym wysokość lewego i prawego poddrzewa
+**Drzewo AVL** - jest to zrównoważone binarne drzewo poszukiwań (BST), w którym wysokość lewego i prawego poddrzewa
 każdego węzła różni się co najwyżej o jeden.
 
 ## Operacje
@@ -36,7 +36,7 @@ Usuwanie elementu z drzewa AVL odbywa się tak samo jak w przypadku drzewa BST (
 go usuwamy zachowując wszystkie własniści drzewa BST) po wykonanej operacji usuwania sprawdzamy czy drzewo jest
 zrównoważone, jeśli nie wykonujemy rotacje jak w przypadku wstawiania.  
 
-### Projekt
+## Projekt
 
 Moje drzewo AVL składa się z dwóch klas:
 
