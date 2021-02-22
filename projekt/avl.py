@@ -126,7 +126,7 @@ class AVLTree:
         return self.get_min_value_node(root.left)
 
     def pre_order(self):
-        self.pre_order_1(self.root)
+        return self.pre_order_1(self.root)
 
     def pre_order_1(self, root):
         if root is None:
@@ -136,6 +136,8 @@ class AVLTree:
         self.pre_order_1(root.right)
 
     def get_size(self):
+        if self.root is None:
+            return 0
         return self.size
 
     def is_avl(self):

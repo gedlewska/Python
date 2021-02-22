@@ -62,5 +62,3 @@ wysokość drzewa.
 https://eduinf.waw.pl/inf/alg/001_search/0108.php
 https://pl.wikipedia.org/wiki/Drzewo_AVL
 https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm
-
-
